@@ -15,7 +15,7 @@ resource "aws_instance" "ec2demo"{
     #it will create ec2 instance in all the avaiability zones of a vpc
     for_each = toset(data.aws_availability_zones.my_azones.names)
     availability_zone = each.key
-    subnet_id = [
+    subnet_ids = [
       module.vpc.public_subnet[0],
       module.vpc.public_subnet[1]
     ]
