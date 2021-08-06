@@ -7,9 +7,9 @@ terraform {
   }
 }
 backend "s3" {
-  bucket = 
+  bucket = "terraform-state-gopal"
   key = "dev/terraform.tfstate"
-  region = ap-northeast-2
+  region = "ap-northeast-2"
 }
 
 # Configure the AWS Provider
