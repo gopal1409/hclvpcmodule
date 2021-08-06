@@ -5,12 +5,14 @@ terraform {
       version = "~> 3.0"
     }
   }
-}
-backend "s3" {
+  backend "s3" {
   bucket = "terraform-state-gopal"
   key = "dev/terraform.tfstate"
   region = "ap-northeast-2"
 }
+
+}
+
 
 # Configure the AWS Provider
 provider "aws" {
